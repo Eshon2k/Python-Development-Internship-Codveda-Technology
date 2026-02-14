@@ -2,28 +2,31 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
-# URL of the website to scrape
-url = 'https://example.com/products'
+# 1. Use a real practice URL
+url = 'https://books.toscrape.com/'
 
-# Send a GET request to the website
+print(f"Connecting to {url}...")
 response = requests.get(url)
 
-# Parse the HTML content of the page with BeautifulSoup
+# 2. Parse the HTML
 soup = BeautifulSoup(response.text, 'html.parser')
 
-# Find all product containers (adjust the tag and class as per the website structure)
-products = soup.find_all('div', class_='product')
+# 3. Find the correct HTML containers for books
+products = soup.find_all('article', class_='product_pod')
 
-# Open a CSV file to write the extracted data
+print(f"Found {len(products)} products. Writing to CSV...")
+
 with open('products.csv', mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
-    # Write the header row
     writer.writerow(['Title', 'Price'])
-    
-    # Loop through each product and extract title and price
+
     for product in products:
-        title = product.find('h2', class_='title').text.strip()
-        price = product.find('span', class_='price').text.strip()
-        # Write the extracted data to the CSV file
+        # 4. Target the specific tags for Title and Price
+        title = product.find('h3').find('a')['title']
+        price = product.find('p', class_='price_color').text
+        
         writer.writerow([title, price])
+        print(f" - Scraped: {title}")
+
+print("Success! Data saved to products.csv")
 
