@@ -6,7 +6,7 @@ This repository contains the projects completed during my Python Development Int
 🛠️ Project Levels & Tasks
 To fulfill the internship requirements, I have completed two tasks for each required level.  
 
-Level 1: Basic
+Level 1: Basic (completed)
 Task 1: Simple Calculator  
 Description: A functional calculator for addition, subtraction, multiplication, and division.  
 Features: Includes functions for each operation and robust error handling for division by zero.  
@@ -14,7 +14,7 @@ Task 2: Number Guessing Game
 Description: A game where the user guesses a randomly generated number between 1 and 100.  
 Features: Provides "Too high/Too low" feedback and tracks the number of attempts.  
 
-Level 2: Intermediate (In Progress/Completed)
+Level 2: Intermediate (Completed)
 Task 1: To-Do List Application  
 Description: A command-line application to manage daily tasks.  
 Features: Users can add, delete, and mark tasks as done, with persistent storage in JSON/CSV.  
@@ -22,7 +22,7 @@ Task 2: Data Scraper
 Description: A web scraper built using BeautifulSoup to extract website data.  
 Features: Automatically saves extracted data (titles/prices) into a CSV file.  
 
-Level 3: Advanced (In Progress/Completed)
+Level 3: Advanced (Completed)
 Task 2: Django Web Application with authentication.
 Description:Build a fully functional web application
 using Django that include suser authentication(login,
