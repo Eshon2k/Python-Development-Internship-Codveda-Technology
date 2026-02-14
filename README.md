@@ -23,9 +23,10 @@ Description: A web scraper built using BeautifulSoup to extract website data.
 Features: Automatically saves extracted data (titles/prices) into a CSV file.  
 
 Level 3: Advanced (In Progress/Completed)
-Task 2: File Encryption/Decryption  
-Description: A security script to protect text file content.  
-Features: Implements encryption algorithms to save secure files and provides a decryption method.  
+Task 2: Django Web Application with authentication.
+Description:Build a fully functional web application
+using Django that include suser authentication(login,
+registration,and password reset).The applicationcan and be blog,task manager or e-commerce site. 
 Task 3: N-Queens Problem  
 Description: A mathematical puzzle solver for an N \times N chessboard.  
 Features: Uses a backtracking algorithm to ensure no two queens threaten each other.  
